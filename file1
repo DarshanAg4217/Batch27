@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 helo this data is main 
 this is main data 
 this is new data 
+=======
+this is conflict commit
+<<<<<<< HEAD
+`this is conficlt test 2
+
+conflict test 3
+:
+>>>>>>> feature
