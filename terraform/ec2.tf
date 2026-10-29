@@ -15,7 +15,7 @@ provider "aws" {
 
 resource "aws_instance" "myec2" {
 
-    ami = "ami-08e7e754b2c895da7"
+    ami = "var.myami"
     instance_type = "t3.micro"
     key_name = "id_rsa"
     vpc_security_group_ids = [ "sg-0ea173d8c56d3d66b" ]
@@ -25,4 +25,15 @@ resource "aws_instance" "myec2" {
         Name = "spider"
     }
 
+}
+
+# variable block syntax
+variable "myami" {
+    default = "ami-08e7e754b2c895da7"
+    description = "ami id for ec2 instance"   
+}
+
+variable "instance_type" {
+    default = "t3.micro"
+    description = "instance type for ec2 instance"   
 }
