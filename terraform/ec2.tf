@@ -15,8 +15,8 @@ provider "aws" {
 
 resource "aws_instance" "myec2" {
 
-    ami = "var.myami"
-    instance_type = "var.instance_type"
+    ami = var.myami
+    instance_type = var.instance_type
     key_name = "id_rsa"
     vpc_security_group_ids = [ "sg-0ea173d8c56d3d66b" ]
     tags = {
